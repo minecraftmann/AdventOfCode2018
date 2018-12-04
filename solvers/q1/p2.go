@@ -4,7 +4,6 @@ import (
 	"io/ioutil"
 	"strings"
 	"strconv"
-	"fmt"
 )
 
 func Part2() (int, error) {
@@ -42,8 +41,6 @@ func Part2() (int, error) {
 				}
 			}
 
-			fmt.Println(m)
-			fmt.Println(m[15])
 
 			for a := 0; a < len(m); a++ {
 				if len(m[a]) == 4{
@@ -66,17 +63,7 @@ func Part2() (int, error) {
 					m[a] = []int{t1,t2,t3,t4,t5,t6}
 				}
 			}
-
-
-			fmt.Println("  ")
-
-			fmt.Println("  ")
-
-			fmt.Println(m[15])
-
-
-
-			return 1, nil
+			return total, nil
 		}	
 	}
 

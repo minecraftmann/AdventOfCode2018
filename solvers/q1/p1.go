@@ -25,17 +25,16 @@ func Part1() (int, error) {
 				return 0, err
 			}else{
 				total += int(intParsed)
-				fmt.Println("sum at ", i," = ",total+137*477)
 				totals1 = append(totals1, total)
 				totals2 = append(totals2, total+137*477)
-				fmt.Println("sum at ", i," = ",total)
 			}
 		}
-		fmt.Println("creative")
-		for l := 0; l < len(totals2); l++ {
-			for i := 0; i < len(totals1); i++ {
+		flag := true;
+		for l := 0;flag && l < len(totals2); l++ {
+			for i := 0;flag && i < len(totals1) && flag; i++ {
 				if totals2[l] == totals1[i]{
-					fmt.Println(totals2[l])
+					fmt.Println("Part 2: ",totals2[l])
+					flag = false;
 				}
 			}
 		}
